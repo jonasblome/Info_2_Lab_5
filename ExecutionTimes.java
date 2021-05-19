@@ -1,6 +1,6 @@
 
 public class ExecutionTimes {
-
+	
 	public static void main(String[] args) {
 		ExecutionTimes executor = new ExecutionTimes();
 
@@ -48,16 +48,7 @@ public class ExecutionTimes {
 		executor.fragment7(10000);
 		executor.fragment8(10000);
 		System.out.println();
-		System.out.println("100000s");
-		System.out.println();
-		executor.fragment1(100000);
-		executor.fragment2(100000);
-		executor.fragment3(100000);
-		executor.fragment4(100000);
-		executor.fragment5(100000);
-		executor.fragment6(100000);
-		executor.fragment7(100000);
-		executor.fragment8(100000);
+	
 		System.out.println(isPrime(24));
 	}
 	
@@ -71,7 +62,7 @@ public class ExecutionTimes {
 	
 	// runtime: O(n * n)
 	public void fragment2 (int n) {
-		int sum = 0;
+		long sum = 0;
 		for ( int i = 0; i < n; i ++)
 		    for ( int j = 0; j < n; j ++)
 		        sum++;
@@ -89,7 +80,7 @@ public class ExecutionTimes {
 	
 	// runtime: O(n + n * n) (n + can be omitted)
 	public void fragment4 (int n) {
-		int sum = 0;
+		long sum = 0;
 		for ( int i = 0; i < n; i ++) {
 		    sum ++;
 		    for ( int j = 0; j < n; j ++)
@@ -100,7 +91,7 @@ public class ExecutionTimes {
 	
 	// runtime: O(n * n * n)
 	public void fragment5 (int n) {
-		int sum = 0;
+		long sum = 0;
 		for ( int i = 0; i < n; i ++)
 		    for ( int j = 0; j < n*n; j ++)
 		    sum++;
@@ -109,7 +100,7 @@ public class ExecutionTimes {
 	
 	// runtime: O((n - 1)!)
 	public void fragment6 (int n) {
-		int sum = 0;
+		long sum = 0;
 		for ( int i = 0; i < n; i ++)
 		    for ( int j = 0; j < i; j ++)
 		        sum++;
@@ -118,7 +109,7 @@ public class ExecutionTimes {
 	
 	// runtime: O((n - 1) * n * n * (n - 1)!) (the - 1 can be omitted)
 	public void fragment7 (int n) {
-		int sum = 0;
+		long sum = 0;
 		for ( int i = 1; i < n; i ++)
 		    for ( int j = 0; j < n*n; j ++)
 		        if (j % i == 0)
@@ -129,7 +120,7 @@ public class ExecutionTimes {
 	
 	// runtime: O(log(n))
 	public void fragment8 (int n) {
-		int sum = 0;
+		long sum = 0;
 		int i = n;
 		while (i > 1) {
 		    i = i / 2;
@@ -153,4 +144,5 @@ public class ExecutionTimes {
 		}
 		return true;
 	}
+
 }
